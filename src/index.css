@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .buttons-play {
+    @apply rounded-full bg-white/[0.07] p-3 text-xs flex mr-2 backdrop-blur-sm
+  }
+  .play-icon{
+    @apply transition-all hover:cursor-pointer hover:scale-110
+  }
+}
+
+* {
+  /* overflow-x: hidden; */
+  font-family: 'Quicksand', sans-serif;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scroll bar in chrome  */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.player{
+  overflow-x: visible !important;
+}
+
+.color-gradient{
+  background: linear-gradient(179.89deg, rgba(0, 0, 0, 0) 0.1%, rgba(15, 18, 19, 0.85) 80.67%);
+}
+
+.collection-container:hover > img {
+  transform: scale(1.2);
+}
+
+.collection-container:hover .likes {
+  margin-bottom: 0;
+}
+
+.collection-container:hover .play-icon{
+  opacity: 1;
+}
+
+.slider {
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.navlink-icon{
+  fill: #EFEEE0;
+  fill-opacity: 0.25;
+}
+
+.navlink-icon.active{
+  fill: #FACD66;
+  fill-opacity: 1;
+}
+
+.nav-link svg{
+  fill: #EFEEE0;
+  fill-opacity: 0.25;
+}
+
+.nav-link.active svg{
+  fill: #FACD66;
+  fill-opacity: 1;
+}
+
+.nav-link.active p{
+  color: #fff;
+}
